@@ -1,10 +1,25 @@
 import { Box } from "@chakra-ui/react";
 
-function Card() {
+// eslint-disable-next-line react/prop-types
+function Avatar({ ...props }) {
+  const { style, alt } = props;
+  return (
+    <>
+      <img
+        src="https://react.dev/images/home/conf2021/cover.svg"
+        alt={alt.alt}
+        style={style}
+      />
+    </>
+  );
+}
+
+function Card({ ...props }) {
+  const { style, alt } = props;
   return (
     <>
       <Box boxShadow="dark-lg" p="6" rounded="md" bg="white">
-        <h1>Card Head</h1>
+        <Avatar style={style} alt={alt} />
         <h2>Card Subhead</h2>
         <p>Card Body</p>
         <a href="#">Card Link</a>
@@ -16,8 +31,7 @@ function Card() {
 function CardGallery() {
   return (
     <>
-      <Card />
-      <Card />
+      <Card style={{ borderRadius: "20px" }} alt={{ alt: "ReactJS" }} />
     </>
   );
 }
