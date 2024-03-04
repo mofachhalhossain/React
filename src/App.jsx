@@ -1,9 +1,9 @@
-import CardGallery from "./components/Card";
+import PackingList from "./components/PackingList";
 
 function App() {
   return (
     <>
-      <CardGallery />
+      <PackingList />
     </>
   );
 }
