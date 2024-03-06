@@ -1,9 +1,11 @@
-import PackingList from "./components/PackingList";
+import ImpureComponent from "./components/ImpureComponent";
+import PureComp from "./components/PureComponent";
 
 function App() {
   return (
     <>
-      <PackingList />
+      <ImpureComponent />
+      <PureComp num1={2} num2={3} />
     </>
   );
 }
